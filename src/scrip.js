@@ -19,16 +19,19 @@ function buttonVerify(){
         let p = document.getElementById("alert");
         p.innerHTML = "Enviado com sucesso";
         p.style.color = "green";
+        switch(cor){
+            case "verde":
+                document.body.style.backgroundColor = "green";
+                break;
+            case "azul":
+                break;
+                default:
+                    p = document.getElementById("alertCor");
+                    document.body.style.backgroundColor = "white";
+                    p.innerHTML = "Cor inexistente";
+                    p.style.color = "black";
+        }   
     }
     
-    switch(cor){
-        case  "verde":
-            document.body.backgroundcolor = "green";
-        case  "azul":
-            document.body.backgroundcolor = "blue";
-        default:
-            p = document.getElementById("alertCor");
-            p.innerHTML = "Não foi inserido nenhuma cor";
-    }   
 
 }
